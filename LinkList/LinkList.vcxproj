@@ -138,7 +138,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HedaInsert.cpp" />
     <ClCompile Include="LinkList.cpp" />
+    <ClCompile Include="PrintLinkList.cpp" />
+    <ClCompile Include="TailInsert.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HeadInsert.h" />
+    <ClInclude Include="LNode.h" />
+    <ClInclude Include="PrintLinkList.h" />
+    <ClInclude Include="TailInsert.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

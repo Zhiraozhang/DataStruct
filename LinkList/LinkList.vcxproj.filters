@@ -18,5 +18,28 @@
     <ClCompile Include="LinkList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="HedaInsert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TailInsert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintLinkList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HeadInsert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TailInsert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintLinkList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

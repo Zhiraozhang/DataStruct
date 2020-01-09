@@ -1,56 +1,33 @@
 #include<iostream>
+#include"LNode.h"
+#include"HeadInsert.h"
+#include"TailInsert.h"
+#include"PrintLinkList.h"
+
 using namespace std;
 
-typedef struct LNode {
-	int data;
-	LNode* next;
-}*LinkList;
-
-LinkList HeadInsert(LinkList& L) {
-	int x;
-	L = new LNode;
-	L->next = NULL;
-	cout << "请输入x: ";
-	cin >> x;
-	while (x != 9999) {
-		LNode* s = new LNode;
-		s->data = x;
-		s->next = L->next;
-		L->next = s;
-		cout << "请输入下一个值: ";
-		cin >> x;
+LinkList GetElem(LinkList L, int i) {	//按序号查找节点值
+	if (i < 0)return NULL;
+	LNode* p = L;
+	while(p&&i>0){
+		p = p -> next;
+		i--;
 	}
-	return L;
-}
-
-LinkList TailInsert(LinkList& L) {
-	int x;
-	L = new LNode;
-	LNode* Tail = L;
-	cout << "请输入x：";
-	cin >> x;
-	while (x != 9999) {
-		LinkList s = new LNode;
-		s->data = x;
-		Tail->next = s;
-		Tail = s;
-		cout << "请输入下一个值: ";
-		cin >> x;
+	if (p != NULL) {
+		std::cout << p->data;
+		return p;
 	}
-	Tail->next = NULL;
-	return L;
-}
-
-void Print(LinkList L) {
-	LNode* s = L->next;
-	for (; s != NULL; s = s->next) {
-		cout << "链表的数据为"<<s->data << "    ";
+	else {
+		cout << "不存在" << endl;
+		return NULL;
 	}
 }
 
 int main() {
 	LinkList L1;
+	//HeadInsert(L1);
 	TailInsert(L1);
-	Print(L1);
+	//PrintLinkList(L1);
+	GetElem(L1, 5);
 	return 0;
 }
